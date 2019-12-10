@@ -1,0 +1,109 @@
+Dec 10 22:11:59.108 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Dec 10 22:11:59.109 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 63737.
+Dec 10 22:11:59.575 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 10 22:11:59.576 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\JacintoLuf\Desktop\ua\ano3\1sem\fr\projeto-fr19-20\projeto-fr\project-files\dynamips 
+Dec 10 22:11:59.576 GENERAL: working_dir=C:\Users\JacintoLuf\Desktop\ua\ano3\1sem\fr\projeto-fr19-20\projeto-fr\project-files\dynamips
+Dec 10 22:11:59.576 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\JacintoLuf\Desktop\ua\ano3\1sem\fr\projeto-fr19-20\projeto-fr\project-files\dynamips\083ee616-476e-4b38-b6c8-3a6bee2d9de5 
+Dec 10 22:11:59.577 GENERAL: working_dir=C:\Users\JacintoLuf\Desktop\ua\ano3\1sem\fr\projeto-fr19-20\projeto-fr\project-files\dynamips\083ee616-476e-4b38-b6c8-3a6bee2d9de5
+Dec 10 22:11:59.577 HYPERVISOR: exec_cmd: vm create RouterA 3 c7200 
+Dec 10 22:11:59.579 VM: VM RouterA created.
+Dec 10 22:11:59.580 HYPERVISOR: exec_cmd: vm set_con_tcp_port RouterA 5002 
+Dec 10 22:11:59.580 HYPERVISOR: exec_cmd: c7200 get_mac_addr RouterA 
+Dec 10 22:11:59.580 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 10 22:11:59.580 HYPERVISOR: exec_cmd: vm slot_add_binding RouterA 0 0 C7200-IO-FE 
+Dec 10 22:11:59.581 HYPERVISOR: exec_cmd: vm set_disk0 RouterA 0 
+Dec 10 22:11:59.581 HYPERVISOR: exec_cmd: vm set_exec_area RouterA 64 
+Dec 10 22:11:59.582 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 10 22:11:59.582 HYPERVISOR: exec_cmd: vm set_idle_pc RouterA 0x601712a8 
+Dec 10 22:11:59.583 HYPERVISOR: exec_cmd: vm set_ios RouterA C:/Users/JacintoLuf/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Dec 10 22:11:59.584 HYPERVISOR: exec_cmd: c7200 set_mac_addr RouterA ca03.0594.0000 
+Dec 10 22:11:59.584 HYPERVISOR: exec_cmd: vm set_nvram RouterA 512 
+Dec 10 22:11:59.584 HYPERVISOR: exec_cmd: vm set_ram RouterA 512 
+Dec 10 22:11:59.585 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 10 22:11:59.585 HYPERVISOR: exec_cmd: vm slot_remove_binding RouterA 0 0 
+Dec 10 22:11:59.586 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 10 22:11:59.586 HYPERVISOR: exec_cmd: vm slot_add_binding RouterA 0 0 C7200-IO-2FE 
+Dec 10 22:11:59.586 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 10 22:11:59.587 HYPERVISOR: exec_cmd: vm slot_add_binding RouterA 1 0 PA-2FE-TX 
+Dec 10 22:12:06.130 HYPERVISOR: exec_cmd: nio create_udp udp-bf8455d2-a019-4b23-b394-a564959a2e23 10052 127.0.0.1 10053 
+Dec 10 22:12:06.366 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterA 0 0 udp-bf8455d2-a019-4b23-b394-a564959a2e23 
+Dec 10 22:12:06.366 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 10 22:15:09.558 HYPERVISOR: exec_cmd: nio create_udp udp-e14d9a47-1bef-40bc-bb3d-e8bcc2c459a8 10116 127.0.0.1 10117 
+Dec 10 22:15:09.561 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterA 0 1 udp-e14d9a47-1bef-40bc-bb3d-e8bcc2c459a8 
+Dec 10 22:15:09.561 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 10 22:15:19.699 HYPERVISOR: exec_cmd: vm create Ghost 0 c7200 
+Dec 10 22:15:19.700 VM: VM Ghost created.
+Dec 10 22:15:19.701 HYPERVISOR: exec_cmd: vm set_ios Ghost C:/Users/JacintoLuf/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Dec 10 22:15:19.702 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Dec 10 22:15:19.702 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost 'C:\Users\JacintoLuf\Desktop\ua\ano3\1sem\fr\projeto-fr19-20\projeto-fr\project-files\dynamips\c7200-adventerprisek9-mz.151-4.M2.image-512.ghost' 
+Dec 10 22:15:19.702 HYPERVISOR: exec_cmd: vm set_ram Ghost 512 
+Dec 10 22:15:19.703 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Dec 10 22:15:19.703 HYPERVISOR: exec_cmd: vm set_config Ghost configs\i0_startup-config.cfg 
+Dec 10 22:15:19.703 HYPERVISOR: exec_cmd: vm start Ghost 
+Dec 10 22:15:19.715 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Dec 10 22:15:19.930 VM: VM Ghost shutdown.
+Dec 10 22:15:19.930 VM: VM Ghost destroyed.
+Dec 10 22:15:19.935 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 10 22:15:19.936 HYPERVISOR: exec_cmd: vm set_config RouterA configs\i3_startup-config.cfg 
+Dec 10 22:15:19.936 HYPERVISOR: exec_cmd: vm start RouterA 
+Dec 10 22:15:50.408 HYPERVISOR: exec_cmd: vm extract_config RouterA 
+Dec 10 22:16:03.826 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 10 22:16:03.826 HYPERVISOR: exec_cmd: vm stop RouterA 
+Dec 10 22:16:03.999 VM: VM RouterA shutdown.
+Dec 10 22:16:04.000 HYPERVISOR: exec_cmd: vm extract_config RouterA 
+Dec 10 22:16:24.618 HYPERVISOR: exec_cmd: vm create Ghost 0 c7200 
+Dec 10 22:16:24.619 VM: VM Ghost created.
+Dec 10 22:16:24.620 HYPERVISOR: exec_cmd: vm set_ios Ghost C:/Users/JacintoLuf/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Dec 10 22:16:24.620 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Dec 10 22:16:24.621 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost 'C:\Users\JacintoLuf\Desktop\ua\ano3\1sem\fr\projeto-fr19-20\projeto-fr\project-files\dynamips\c7200-adventerprisek9-mz.151-4.M2.image-512.ghost' 
+Dec 10 22:16:24.621 HYPERVISOR: exec_cmd: vm set_ram Ghost 512 
+Dec 10 22:16:24.621 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Dec 10 22:16:24.622 HYPERVISOR: exec_cmd: vm set_config Ghost configs\i0_startup-config.cfg 
+Dec 10 22:16:24.622 HYPERVISOR: exec_cmd: vm start Ghost 
+Dec 10 22:16:24.642 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Dec 10 22:16:24.853 VM: VM Ghost shutdown.
+Dec 10 22:16:24.853 VM: VM Ghost destroyed.
+Dec 10 22:16:24.859 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 10 22:16:24.860 HYPERVISOR: exec_cmd: vm set_config RouterA configs\i3_startup-config.cfg 
+Dec 10 22:16:24.860 HYPERVISOR: exec_cmd: vm start RouterA 
+Dec 10 22:16:28.383 HYPERVISOR: exec_cmd: vm create Ghost 0 c7200 
+Dec 10 22:16:28.385 VM: VM Ghost created.
+Dec 10 22:16:28.387 HYPERVISOR: exec_cmd: vm set_ios Ghost C:/Users/JacintoLuf/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Dec 10 22:16:28.387 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Dec 10 22:16:28.387 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost 'C:\Users\JacintoLuf\Desktop\ua\ano3\1sem\fr\projeto-fr19-20\projeto-fr\project-files\dynamips\c7200-adventerprisek9-mz.151-4.M2.image-512.ghost' 
+Dec 10 22:16:28.387 HYPERVISOR: exec_cmd: vm set_ram Ghost 512 
+Dec 10 22:16:28.388 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Dec 10 22:16:28.390 HYPERVISOR: exec_cmd: vm set_config Ghost configs\i0_startup-config.cfg 
+Dec 10 22:16:28.390 HYPERVISOR: exec_cmd: vm start Ghost 
+Dec 10 22:16:30.340 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Dec 10 22:16:30.553 VM: VM Ghost shutdown.
+Dec 10 22:16:30.553 VM: VM Ghost destroyed.
+Dec 10 22:16:30.560 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 10 22:16:32.375 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 10 22:16:32.382 HYPERVISOR: exec_cmd: vm stop RouterA 
+Dec 10 22:16:32.482 VM: VM RouterA shutdown.
+Dec 10 22:16:32.483 HYPERVISOR: exec_cmd: vm extract_config RouterA 
+Dec 10 22:16:32.571 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 10 22:16:32.573 HYPERVISOR: exec_cmd: vm extract_config RouterA 
+Dec 10 22:16:32.768 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 10 22:16:32.769 HYPERVISOR: exec_cmd: vm extract_config RouterA 
+Dec 10 22:17:22.137 HYPERVISOR: exec_cmd: vm create Ghost 0 c7200 
+Dec 10 22:17:22.140 VM: VM Ghost created.
+Dec 10 22:17:22.141 HYPERVISOR: exec_cmd: vm set_ios Ghost C:/Users/JacintoLuf/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Dec 10 22:17:22.141 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Dec 10 22:17:22.141 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost 'C:\Users\JacintoLuf\Desktop\ua\ano3\1sem\fr\projeto-fr19-20\projeto-fr\project-files\dynamips\c7200-adventerprisek9-mz.151-4.M2.image-512.ghost' 
+Dec 10 22:17:22.142 HYPERVISOR: exec_cmd: vm set_ram Ghost 512 
+Dec 10 22:17:22.142 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Dec 10 22:17:22.143 HYPERVISOR: exec_cmd: vm set_config Ghost configs\i0_startup-config.cfg 
+Dec 10 22:17:22.143 HYPERVISOR: exec_cmd: vm start Ghost 
+Dec 10 22:17:22.156 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Dec 10 22:17:22.368 VM: VM Ghost shutdown.
+Dec 10 22:17:22.368 VM: VM Ghost destroyed.
+Dec 10 22:17:22.374 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 10 22:17:22.374 HYPERVISOR: exec_cmd: vm set_config RouterA configs\i3_startup-config.cfg 
+Dec 10 22:17:22.374 HYPERVISOR: exec_cmd: vm start RouterA 
+Dec 10 22:33:22.950 HYPERVISOR: exec_cmd: vm extract_config RouterA 
+Dec 10 22:33:52.615 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 10 22:33:52.616 HYPERVISOR: exec_cmd: vm stop RouterA 
+Dec 10 22:33:52.792 VM: VM RouterA shutdown.
+Dec 10 22:33:52.793 HYPERVISOR: exec_cmd: vm extract_config RouterA 
