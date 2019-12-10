@@ -1,1 +1,0 @@
-Dec 09 15:30:12.037 VM: renamed from 'R3' to 'RouterA'
